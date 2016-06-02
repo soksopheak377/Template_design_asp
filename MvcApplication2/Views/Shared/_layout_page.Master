@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="_layout_page.master.cs" Inherits="MvcApplication2.Views.Shared._layout_page" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <%--<form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>--%>
+    <header>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p class="site-title"><%: Html.ActionLink("your logo here", "Index", "Home") %></p>
+                </div>
+                <div class="float-right">
+                    <section id="login">
+                        <%: Html.Partial("_LoginPartial") %>
+                    </section>
+                    <nav>
+                        <ul id="menu">
+                            <li><%: Html.ActionLink("Home", "Index", "Home") %></li>
+                            <li><%: Html.ActionLink("About", "About", "Home") %></li>
+                            <li><%: Html.ActionLink("Contact", "Contact", "Home") %></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+</body>
+</html>
